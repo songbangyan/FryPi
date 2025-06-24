@@ -273,44 +273,14 @@ void DMA2_Stream7_IRQHandler(void)
 
 /* USER CODE BEGIN 1 */
 
-void EXTI2_IRQHandler(void)
-{
-
-  HardInt_Charg_flag = 1;
-
-  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_2);
-
-}
-
 /**
-  * @brief This function handles EXTI line4 interrupt.Key2 interrupt
+  * @brief This function handles EXTI line0 interrupt.Key interrupt
   */
-void EXTI4_IRQHandler(void)
+void EXTI0_IRQHandler(void)
 {
 
-  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_4);
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
   
-}
-
-
-/**
-  * @brief This function handles EXTI line[9:5] interrupts.Key1 interrupt
-  */
-void EXTI9_5_IRQHandler(void)
-{
-  
-  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_5);
-
-}
-
-/**
-  * @brief This function handles EXTI line[15:10] interrupts.MPU Interrupt
-  */
-void EXTI15_10_IRQHandler(void)
-{
-  HardInt_mpu_flag = 1;
-  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_12);
-
 }
 
 /* USER CODE END 1 */
