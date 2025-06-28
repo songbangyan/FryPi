@@ -10,15 +10,10 @@ void Key_Port_Init(void)
 
   /*Configure GPIO pin : PA0 */
   GPIO_InitStruct.Pin = KEY1_PIN;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(KEY1_PORT, &GPIO_InitStruct);
 
-
-
-  /* EXTI interrupt init*/
-	HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
 }
 
 uint8_t KeyScan(uint8_t mode)
